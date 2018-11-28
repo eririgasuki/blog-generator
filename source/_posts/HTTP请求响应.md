@@ -7,7 +7,7 @@ tags:
 
 ## 请求的格式
 
-(```)
+```
 1 动词 路径 协议/版本
 2 Key1: value1
 2 Key2: value2
@@ -17,7 +17,7 @@ tags:
 2 User-Agent: curl/7.54.0
 3 
 4 要上传的数据
-(```)
+```
 
 0. 请求最多包含四部分，最少包含三部分。（也就是说第四部分可以为空）
 1. 第三部分永远都是一个回车（\n）
@@ -39,7 +39,7 @@ tags:
 
 ##响应的格式
 
-(```)
+```
 1 协议/版本号 状态码 状态解释
 2 Key1: value1
 2 Key2: value2
@@ -47,7 +47,7 @@ tags:
 2 Content-Type: text/html
 3
 4 要下载的内容
-(```)
+```
 
 * HTTP状态码（HTTP Status Code）是用以表示网页服务器HTTP响应状态的3位数字代码。
    * 1XX 不常用 代表请求已被接受，需要继续处理。
@@ -74,27 +74,27 @@ tags:
 
 ## curl常用（tldr）
 
-(```)
+```
 curl ：   Transfers data from or to a server.Supports most protocols, including HTTP, FTP, and POP3.
 
-* Download the contents of an URL to a file: curl http://example.com -o filename **下载网页**
+**下载网页** Download the contents of an URL to a file: curl http://example.com -o filename 
 
-* Download a file, saving the output under the filename indicated by the URL: curl -O http://example.com/filename **下载文件**
+**下载文件** Download a file, saving the output under the filename indicated by the URL: curl -O http://example.com/filename 
 
-* Send form-encoded data (POST request of type application/x-www-form-urlencoded): curl -d 'name=bob' http://example.com/form **提交post内容**
+**提交post内容** Send form-encoded data (POST request of type application/x-www-form-urlencoded): curl -d 'name=bob' http://example.com/form 
 
-* Send a request with an extra header, using a custom HTTP method: curl -H 'X-My-Header: 123' -X PUT http://example.com **提交额外header内容**
-(```)
+**提交额外header内容** Send a request with an extra header, using a custom HTTP method: curl -H 'X-My-Header: 123' -X PUT http://example.com 
+```
 
 ## 请求示例
 
-(```)
+```
 curl -X POST -d "name=bob" -s -v -H "X-My-Header: 123" -- "https://www.baidu.com"
-(```)
+```
 
 请求的内容为
 
-(```)
+```
 POST / HTTP/1.1
 Host: www.baidu.com
 User-Agent: curl/7.54.0
@@ -104,7 +104,7 @@ Content-Length: 8
 Content-Type: application/x-www-form-urlencoded
 
 name=bob
-(```)
+```
 
 * -X POST 表示用post请求
 * -S 不用进度条或错误信息的silent模式
