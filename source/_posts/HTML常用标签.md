@@ -6,7 +6,7 @@ tags:
 
 # head部分
 
-`<head>` 元素包含了所有的头部标签元素,常用的有`<meta>,<title>,<link>`
+`<head>` 元素包含了所有的头部标签元素,常用的有`<meta>,<title>,<link>,<script>`
 
 ## title
 
