@@ -4,11 +4,11 @@ date: 2018-12-01 20:22:56
 tags:
 ---
 
-# <head>部分
+# head部分
 
 `<head>` 元素包含了所有的头部标签元素,常用的有`<meta>,<title>,<link>`
 
-## <title>
+## title
 
 `<title>` 标签定义了不同文档的标题。
 `<title>` 在 HTML/XHTML 文档中是必须的。
@@ -17,7 +17,7 @@ tags:
 * 当网页添加到收藏夹时，显示在收藏夹中的标题
 * 显示在搜索引擎结果页面的标题
 
-## <link>
+## link
 
 `<link>` 标签定义了文档与外部资源之间的关系。
 `<link> `标签通常用于链接到样式表:
@@ -35,7 +35,7 @@ tags:
 <link rel="dns-prefetch" href="//bdimg.share.zhix.net">
 ```
 
-## <meta>
+## meta
 
 * meta标签描述了一些基本的元数据。
 * `<meta>` 标签提供了元数据.元数据也不显示在页面上，但会被浏览器解析。
@@ -45,11 +45,11 @@ tags:
 `<meta>`标签可以做的事情非常多也非常复杂，例如SEO优化，移动设备响应式，浏览器内核控制等。
 [常用meta整理](http://www.runoob.com/w3cnote/meta.html)
 
-## <script>
+## script
 
 `<script>`标签用于加载脚本文件，如： JavaScript。
 
-# <body>部分
+# body部分
 
 ## body语义化
 
