@@ -24,8 +24,9 @@ repaint和reflow是DOM操作影响性能的主要原因。一个节点触发了r
 
 # 如何提高性能？
 
+一些常用的提高性能的原则
+
 <table>
-    <caption>一些常用的提高性能的原则</caption>
     <thead>
         <tr>
             <th>方面</th>
