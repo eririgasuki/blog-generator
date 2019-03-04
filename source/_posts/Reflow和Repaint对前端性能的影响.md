@@ -29,7 +29,7 @@ repaint和reflow是DOM操作影响性能的主要原因。一个节点触发了r
 <table>
     <thead>
         <tr>
-            <th>方面</th>
+            <th style="width: 24%">方面</th>
             <th>方法</th>
         </tr>
     </thead>

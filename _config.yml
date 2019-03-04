@@ -80,3 +80,7 @@ theme: hexo-theme-next
 deploy:
   type: git
   repo: git@github.com:eririgasuki/eririgasuki.github.io
+
+marked:
+    gfm: true
+    breaks: false
