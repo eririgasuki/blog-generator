@@ -6,21 +6,21 @@ tags:
 
 # Reflow和Repaint是什么？
 
-*Repaint* 就是“重绘”，它会在你改变 DOM 元素的视觉效果时进行，改变布局时不会触发。比如，`opacity,background-color,visibility`和`outline`等都会触发，“重绘”的开销还是比较昂贵的，因为浏览器会在某一个DOM元素的视觉效果改变后去check这个DOM元素内的所有节点。
+**Repaint** 就是“重绘”，它会在你改变 DOM 元素的视觉效果时进行，改变布局时不会触发。比如，`opacity,background-color,visibility`和`outline`等都会触发，“重绘”的开销还是比较昂贵的，因为浏览器会在某一个DOM元素的视觉效果改变后去check这个DOM元素内的所有节点。
 
-*Reflow* 就是“回流”，它的影响更大。它会在某一个DOM元素的位置发生改变后触发，而且它会重新计算所有元素的位置和在页面中的占有的面积，这样的话将会引起页面某一个部分甚至整个页面的重新渲染。改变某一个元素会影响它所有的子节点 (children)、祖先节点 (ancestors) 及兄弟节点(siblings)。
+**Reflow** 就是“回流”，它的影响更大。它会在某一个DOM元素的位置发生改变后触发，而且它会重新计算所有元素的位置和在页面中的占有的面积，这样的话将会引起页面某一个部分甚至整个页面的重新渲染。改变某一个元素会影响它所有的子节点 (children)、祖先节点 (ancestors) 及兄弟节点(siblings)。
 
-浏览器的对待页面是*先布局后渲染*,在PC端Reflow和Repaint对于性能的影响是微乎其微，但是在*移动端*这俩货简直就是*性能杀手*。
+浏览器的对待页面是**先布局后渲染**,在PC端Reflow和Repaint对于性能的影响是微乎其微，但是在**移动端**这俩货简直就是**性能杀手**。
 
-repaint和reflow是DOM操作影响性能的主要原因。一个节点触发了repaint，浏览器会检查DOM Tree中其他所有节点的显示方式；一个节点触发了reflow会导致它的祖先节点，后代节点以及在它之后的节点全部reflow。*reflow对性能的影响大于repaint*。
+repaint和reflow是DOM操作影响性能的主要原因。一个节点触发了repaint，浏览器会检查DOM Tree中其他所有节点的显示方式；一个节点触发了reflow会导致它的祖先节点，后代节点以及在它之后的节点全部reflow。**reflow对性能的影响大于repaint**。
 
 什么情况下会触发Reflow？
 
-* 添加、删除或者改变DOM元素的可见性时：使用JS去改变DOM元素时会触发Reflow。
-* 添加、删除或者改变CSS样式：直接改变CSS Style或者元素的class可能会影响布局，还有改变一个元素的宽度能够影响它所在的DOM节点中的所有元素，以及它周围的那些元素。
-* CSS3 动画（`animation`）和过渡（`transition`）: 动画的每一frame都会触发Reflow。
-* 使用`offsetWidth`和`offsetHeight`：这一点很特别，你读一个DOM的offsetWidth和offsetHeight属性同样会触发一下Reflow，因为这两个属性需要依赖一些元素去计算。
-* 用户交互：用户可以通过`:hover`一下`<a>`链接，在input里面输入文字，拖动浏览器的大小，改变字体大小，更换样式表或者字体等都会触发reflow。
+** 添加、删除或者改变DOM元素的可见性时：使用JS去改变DOM元素时会触发Reflow。
+** 添加、删除或者改变CSS样式：直接改变CSS Style或者元素的class可能会影响布局，还有改变一个元素的宽度能够影响它所在的DOM节点中的所有元素，以及它周围的那些元素。
+** CSS3 动画（`animation`）和过渡（`transition`）: 动画的每一frame都会触发Reflow。
+** 使用`offsetWidth`和`offsetHeight`：这一点很特别，你读一个DOM的offsetWidth和offsetHeight属性同样会触发一下Reflow，因为这两个属性需要依赖一些元素去计算。
+** 用户交互：用户可以通过`:hover`一下`<a>`链接，在input里面输入文字，拖动浏览器的大小，改变字体大小，更换样式表或者字体等都会触发reflow。
 
 # 如何提高性能？
 
